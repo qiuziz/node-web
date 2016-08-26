@@ -50,8 +50,7 @@ function show(response) {
             response.write(error + "\n");
             response.end();
         } else {
-            response.writeHead(200, { "Content-Type": "image/png" });
-            response.writeHead(200, { "Content-Length": file.length });
+            response.writeHead(200, { "Content-Type": "image/png","Content-Length": file.length });
             console.log(file.length);
             response.write(file, "binary");
             response.end();
