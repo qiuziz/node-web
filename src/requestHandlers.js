@@ -46,11 +46,12 @@ function show(response) {
     console.log('This is function');
     fs.readFile("./tmp/test.png", "binary", function (error, file) {
         if (error) {
-            response.writeHead(500, { "Conten-Type": "image/png" });
+            response.writeHead(500, { "Content-Type": "image/png" });
             response.write(error + "\n");
             response.end();
         } else {
-            response.writeHead(200, { "Conten-Type": "image/png" });
+            response.writeHead(200, { "Content-Type": "image/png" });
+            console.log(file.length);
             response.write(file, "binary");
             response.end();
         }
