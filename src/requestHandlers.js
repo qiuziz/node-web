@@ -51,7 +51,7 @@ function show(response) {
             response.end();
         } else {
             response.writeHead(200, { "Content-Type": "image/png" });
-            response.writeHead(200, { "Content-Type": file.length });
+            response.writeHead(200, { "Content-Length": file.length });
             console.log(file.length);
             response.write(file, "binary");
             response.end();
