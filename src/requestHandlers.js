@@ -35,7 +35,7 @@ function upload(response, request) {
         console.log(files.upload.path);
         response.writeHead(200, { "Content-type": "text/html" });
         response.write("received image:<br/> ");
-        response.write("<img src='./show' style='width: 100%; height: 95%;'/>");
+        response.write("<img src='./tmp/test.png' style='width: 100%; height: 95%;'/>");
         response.end();
     })
 
